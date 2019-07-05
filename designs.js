@@ -5,6 +5,10 @@
 
 function fill(e) {
     console.log("clicked!" + e.target.id);
+    let color = document.getElementById("colorPicker").value;
+    console.log(color);
+    let cell = document.getElementById(e.target.id);
+    cell.style.backgroundColor = color;
 }
 
 function makeGrid() {
@@ -23,8 +27,6 @@ function makeGrid() {
     
     let cellId = 1;
     let grid = document.createElement("div");
-    let color = document.getElementById("colorPicker").value;
-    console.log(color);
     
     for (let i = 0; i < rows; i++) {
         for (let j= 0; j < cols; j++) {
